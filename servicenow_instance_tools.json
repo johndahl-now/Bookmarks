@@ -1,0 +1,2120 @@
+{
+  "type": "folder",
+  "name": "Instance Tools",
+  "children": [
+    {
+      "type": "folder",
+      "name": "Favorites",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Quick Notes",
+          "url": "data:text/html, <title>Quick Note</title><style>body{color:white;background-color:black;font:1rem/1.5 monospace;margin:0 auto;padding:2rem;};</style><script>String.prototype.get=function(){window[this]=document.body.innerText};String.prototype.set=function(){w=window.open();w.document.body.innerHTML='<p style=\"color:white;background-color:black;font: 1rem/1.5 monospace;margin:0 auto;padding:2rem;\">'+this.toString()+'</p>'};String.prototype.pset=function(){w=window.open();w.document.body.innerHTML='<pre style=\"color:white;background-color:black;font: 1rem/1.5 monospace;margin:0 auto;padding:2rem;\">'+this.toString()+'</pre>'};</script><body contenteditable>"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open Task",
+          "url": "javascript:top.open(\"/task.do?sysparm_query=number=\"+prompt(\"Task number: \"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Private Task from Project",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,    f=w.g_form,    n=f.getValue(\"number\"),    p=f.getUniqueValue();top.open(\"/vtb_task.do?sys_id=-1&sysparm_query=u_billing_project=\"+p+\"^parent=\"+p);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Time Worked",
+          "url": "javascript:var w=window.gsft_main?gsft_main:window,f=w.g_form;top.open(\"/task_time_worked.do?sys_id=-1&sysparm_query=task=\"+f.getUniqueValue()+\"^user=\"+w.g_user.getUserID()+\"^comments=\"+f.getValue(\"number\")+\": \"+f.getValue(\"short_description\")+\"^time_worked=0 00:15:00\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Filter last 7 days",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window;top.open(w.location.pathname + \"?sysparm_query=sys_created_onRELATIVEGT@dayofweek@ago@7\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open in another instance",
+          "url": "javascript:top.open( \"https://\"+prompt(\"Instance:\")+\".service-now.com\" + location.pathname );"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open Business Rule",
+          "url": "javascript:top.open(\"/sys_script.do?sysparm_query=name=\"+prompt(\"Business Rule Name: \"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open Script Include",
+          "url": "javascript:top.open(\"/sys_script_include.do?sysparm_query=name=\"+prompt(\"Script Include Name: \"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Add Dot-walk Field",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,d=w.document,e=d.getElementById(\"slush_right\"),o=d.createElement(\"option\");o.value=prompt(\"Field: \");o.innerHTML=o.value;e.appendChild(o);"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "AAA",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "My Profile",
+          "url": "javascript:top.open(\"/sys_user.do?sysparm_query=sys_id=javascript:gs.getUserID()\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Impersonate User",
+          "url": "javascript:w=window.open(\"/impersonate_dialog.do\",\"Impersonation\",\"popup,width=500,height=400,left=800,top=200\");setInterval(()=>{if(!w.location.pathname.includes(\"impersonate\")){w.close();window.location.reload();};},1000);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Change User",
+          "url": "javascript:let w=window.open('/login','Change User','popup,width=500,height=500,left=800,top=200');setInterval(()=>{if(!w.location.pathname.includes('login')){w.close();window.location.reload();};},1000);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Login",
+          "url": "javascript:top.open('login.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "SSO Login Page",
+          "url": "javascript:top.open(\"/login_locate_sso.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Logout",
+          "url": "javascript:top.open('logout.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Login History",
+          "url": "javascript:top.open(\"/sys_user_login_history_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Side Door",
+          "url": "javascript:top.open('side_door.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Impersonate Dialog",
+          "url": "javascript:top.open('/impersonate_dialog.do');"
+        },
+        {
+          "type": "folder",
+          "name": "Multi Factor Authentication",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Multi-factor Criteria",
+              "url": "javascript:top.open(\"/multi_factor_criteria_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Role Filter Criteria",
+              "url": "javascript:top.open(\"/sys_role_filter_criteria_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "MFA Context",
+              "url": "javascript:top.open(\"/sys_mfa_policy_context_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "User MFA Settings",
+              "url": "javascript:top.open(\"/user_multifactor_auth_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "SSO",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Multiple Provider SSO Properties",
+              "url": "javascript:top.open('/MultiSSOProperties.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Account Recovery Properties",
+              "url": "javascript:top.open('/acr_properties.do');"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "ACLs",
+          "url": "javascript:top.open(\"/sys_security_acl_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "User Criteria Records",
+          "url": "javascript:top.open(\"/user_criteria_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Administration",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Utils",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Add Navigation",
+              "url": "javascript:var match=window.location.href.match(/(http.*\\/)(\\w+.do)\\?(.*)$/);window.location.href=match[1]+%27nav_to.do?uri=%27+match[2]+%27&%27+match[3];"
+            },
+            {
+              "type": "bookmark",
+              "name": "Cancel My Transactions",
+              "url": "javascript:top.open('cancel_my_transaction.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Clear Server Cache",
+              "url": "javascript:top.open('cache.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Expand Learning Window",
+              "url": "javascript: (function(){'use strict';const el=document.getElementsByClassName('scorm-iframe');if(el&&el[0]){el[0].style.height='90vh';}})();"
+            },
+            {
+              "type": "bookmark",
+              "name": "Get System Property",
+              "url": "javascript:top.open(\"/sys_properties.do?sysparm_query=name=\"+prompt(\"System property name:\"));"
+            },
+            {
+              "type": "bookmark",
+              "name": "Navigate To",
+              "url": "javascript:top.open(prompt('Where do you want to go today:'));"
+            },
+            {
+              "type": "bookmark",
+              "name": "Open in another instance",
+              "url": "javascript:top.open( \"https://\"+prompt(\"Instance:\")+\".service-now.com\" + location.pathname );"
+            },
+            {
+              "type": "bookmark",
+              "name": "Restrict Table API Access",
+              "url": "javascript:top.open('/nav_to.do?uri=sys_security_acl.do?sys_id=9ef8bc918733320025fbd1a936cb0bdd%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Set Row Count",
+              "url": "javascript:top.open(\"/sys_user_preference_list.do?sysparm_query?name=rowcount\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Show Icons - Action Connect",
+              "url": "javascript:top.open('connect_action_icon_classes.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Show Icons - Retina",
+              "url": "javascript:top.open('styles/retina_icons/retina_icons.html');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Tail Node Log",
+              "url": "javascript:top.open('channel.do?sysparm_channel=logtail%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Progress Workers",
+              "url": "javascript:top.open(\"/sys_progress_worker_list.do%3Fsysparm_query%3Dsys_created_onONToday%40javascript%3Ags.beginningOfToday()%40javascript%3Ags.endOfToday()%26sysparm_first_row%3D1%26sysparm_view%3D\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "System Properties",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "System Properties",
+              "url": "javascript:top.open('sys_properties_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Fuzzy Search property setting",
+              "url": "javascript:top.open(\"/nav_to.do?uri=sys_properties.do?sys_id=4800d23243c01210810da4f8f9b8f239\");"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Application Manager",
+          "url": "javascript:top.open('/now/app-manager/home/');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Application Repo",
+          "url": "javascript:top.open(\"https://apprepo.service-now.com\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Clone Admin Console",
+          "url": "javascript:top.open(\"/now/clone/ui/home\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Deleted Audit Records",
+          "url": "javascript: top.open('/sys_audit_delete_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "My Company Applications",
+          "url": "javascript:top.open('$mycompanyappsmgmt.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "My Preferences",
+          "url": "javascript:top.open(\"/sys_user_preference_list.do?sysparm_query=%3D=userDYNAMIC90d1921e5f510100a9ad2572f2b477fe\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Platform Licensing Exemption List",
+          "url": "javascript:top.open('/plat_lic_exemption_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Plugins",
+          "url": "javascript:top.open('$allappsmgmt.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Security Center",
+          "url": "javascript:top.open(\"/now/security-center/overview\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Stats.do",
+          "url": "javascript:top.open('stats.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Statsx.do",
+          "url": "javascript:top.open('statsx.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Upgrade History",
+          "url": "javascript:top.open('/sys_upgrade_history_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "System Logs - 15 minutes",
+          "url": "javascript:top.open('syslog_list.do?sysparm_query=sys_created_onONLast 15 minutes@javascript:gs.beginningOfLast15Minutes()@javascript:gs.endOfLast15Minutes()&sysparm_view=%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Progress Workers - Today",
+          "url": "javascript:top.open(\"/sys_progress_worker_list.do%3Fsysparm_query%3Dsys_created_onONToday%40javascript%3Ags.beginningOfToday()%40javascript%3Ags.endOfToday()%26sysparm_first_row%3D1%26sysparm_view%3D\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Applications",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Agile & Project Management",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Create Story",
+              "url": "javascript:top.open(\"/rm_story.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Create task from story",
+              "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form;top.open(%27rm_scrum_task.do?sys_id=-1&sysparm_query=parent=%27+f.getUniqueValue()+%27^type=4^short_description=Test %27+f.getValue(%27number%27)+%27 - %27+f.getValue(%27short_description%27)+%27^EQ%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Create Defect",
+              "url": "javascript:top.open('/rm_defect.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "New SCRUM Task - Analysis",
+              "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form;top.open(%27/rm_scrum_task.do?sys_id=-1&sysparm_query=story=%27+f.getUniqueValue()+%27^type=1^priority=%27+f.getValue(%27priority%27)+%27^short_description=%27+f.getValue(%27number%27)+%27 - %27+f.getValue(%27short_description%27)+%27^assignment_group=%27+f.getValue(%27assignment_group%27)+%27^assigned_to=%27+f.getValue(%27assigned_to%27));"
+            },
+            {
+              "type": "bookmark",
+              "name": "New SCRUM Task - Coding",
+              "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form;top.open(%27/rm_scrum_task.do?sys_id=-1&sysparm_query=story=%27+f.getUniqueValue()+%27^type=2^priority=%27+f.getValue(%27priority%27)+%27^short_description=%27+f.getValue(%27number%27)+%27 - %27+f.getValue(%27short_description%27)+%27^assignment_group=%27+f.getValue(%27assignment_group%27)+%27^assigned_to=%27+f.getValue(%27assigned_to%27));"
+            },
+            {
+              "type": "bookmark",
+              "name": "New SCRUM Task - Documentation",
+              "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form;top.open(%27/rm_scrum_task.do?sys_id=-1&sysparm_query=story=%27+f.getUniqueValue()+%27^type=3^priority=%27+f.getValue(%27priority%27)+%27^short_description=%27+f.getValue(%27number%27)+%27 - %27+f.getValue(%27short_description%27)+%27^assignment_group=%27+f.getValue(%27assignment_group%27)+%27^assigned_to=%27+f.getValue(%27assigned_to%27));"
+            },
+            {
+              "type": "bookmark",
+              "name": "New SCRUM Task - Testing",
+              "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form;top.open(%27/rm_scrum_task.do?sys_id=-1&sysparm_query=story=%27+f.getUniqueValue()+%27^type=4^priority=%27+f.getValue(%27priority%27)+%27^short_description=%27+f.getValue(%27number%27)+%27 - %27+f.getValue(%27short_description%27)+%27^assignment_group=%27+f.getValue(%27assignment_group%27)+%27^assigned_to=%27+f.getValue(%27assigned_to%27));"
+            },
+            {
+              "type": "bookmark",
+              "name": "All Stories",
+              "url": "javascript:top.open(\"/rm_story_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Create Project Task",
+              "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,f=w.g_form;top.open(\"/customer_project_task.do?sys_id=-1&sysparm_query=parent=\"+f.getUniqueValue()+\"^project=\"+f.getUniqueValue()+\"^assigned_to=\"+w.g_user.getUserID());"
+            },
+            {
+              "type": "bookmark",
+              "name": "Create Story from Project",
+              "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,f=w.g_form;top.open(\"/rm_story.do?sys_id=-1&sysparm_query=project=\"+f.getUniqueValue()+\"^assigned_to=\"+w.g_user.getUserID());"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Change Management",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Change Models",
+              "url": "javascript:top.open('/chg_model_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Model States",
+              "url": "javascript:top.open('/sttrm_state_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Model State Transitions",
+              "url": "javascript:top.open('/sttrm_state_transition_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Model State Transition Conditions",
+              "url": "javascript:top.open('/sttrm_transition_condition_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Risk Conditions",
+              "url": "javascript:top.open('/risk_conditions_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Approval Policies",
+              "url": "javascript:top.open('/chg_policy_approval_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Approval Definitions",
+              "url": "javascript:top.open('/chg_approval_def_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "All Standard Change Proposals",
+              "url": "javascript:top.open('/std_change_proposal_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "New Standard Change Proposal",
+              "url": "javascript:top.open(\"/std_change_proposal.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "CSM",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Cases",
+              "url": "javascript:top.open(\"/sn_customerservice_case_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Customer Service Portal",
+              "url": "javascript:top.open('csm');"
+            },
+            {
+              "type": "bookmark",
+              "name": "CSM/FSM Configurable Workspace",
+              "url": "javascript:top.open('now/cwf/agent/home');"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "HRSD",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "HR Cases",
+              "url": "javascript:top.open(\"/sn_hr_core_case_list.do\");"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Approvals",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Approvals",
+          "url": "javascript:top.open('sysapproval_approver_list.do');"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Checklists",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Checklist Templates",
+          "url": "javascript:top.open(\"/checklist_template_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Checklists",
+          "url": "javascript:top.open(\"/checklist_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Checklist Items",
+          "url": "javascript:top.open(\"/checklist_item_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Development",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Update Sets",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Open the current update set",
+              "url": "javascript:top.open(\"sys_update_set.do?sysparm_query=sys_id=javascript:gs.getPreference(\\\"sys_update_set\\\")\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "New update set from task",
+              "url": "javascript:var i='',w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window,f=w.g_form,n=f.getValue(%27number%27),sd=f.getValue(%27short_description%27),d=f.getValue(%27description%27),q=%27name=%27+n+%27 - %27+sd+%27^description=%27+d;top.open(i+%27/sys_update_set.do?sys_id=-1&sysparm_query=%27+q);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update Set - New",
+              "url": "javascript:top.open(\"/sys_update_set.do?sys_id=-1\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update Sets - Local",
+              "url": "javascript:top.open(\"sys_update_set_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update Sets - Retrieved",
+              "url": "javascript:top.open(\"sys_remote_update_set_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update XML",
+              "url": "javascript:top.open(\"/sys_update_xml_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Customized Metadata Details",
+              "url": "javascript:top.open(\"/sys_metadata_customization_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update Versions",
+              "url": "javascript:top.open(\"/sys_update_version_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Remote Instances",
+              "url": "javascript:top.open(\"/sys_update_set_source.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Update Set Issues",
+              "url": "javascript:top.open(\"/sys_update_preview_problem_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Flow Designer",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Flow Designer",
+              "url": "javascript:top.open('$flow-designer.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Flows",
+              "url": "javascript:top.open(\"/sys_hub_flow_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Flow Actions",
+              "url": "javascript:top.open(\"/sys_hub_action_type_base_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Flow Data Variables",
+              "url": "javascript:top.open(\"/sys_flow_data_var_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Flow Stages",
+              "url": "javascript:top.open(\"/sys_hub_flow_stage_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Flow Variables",
+              "url": "javascript:top.open(\"/sys_hub_flow_variable_list.do%3Fsysparm_query%3Dmodel_table%253Dsys_hub_flow%255EGROUPBYmodel%26sysparm_first_row%3D1%26sysparm_view%3D\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Workflow",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Workflow Editor",
+              "url": "javascript:top.open('workflow_ide.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Workflows",
+              "url": "javascript:top.open('/wf_workflow_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Workflow Contexts",
+              "url": "javascript:top.open(\"/wf_context_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Xplore",
+          "url": "javascript:top.open('snd_xplore.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "ServiceNow Studio",
+          "url": "javascript:top.open(\"/now/servicenow-studio/home\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "App Engine Studio",
+          "url": "javascript:top.open('/now/appenginestudio');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Code Search",
+          "url": "javascript:top.open('/sn_codesearch_CodeSearchExampleUse.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Code Search Tables",
+          "url": "javascript:top.open('/sn_codesearch_table_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Copy URL",
+          "url": "javascript:navigator.clipboard.writeText( location.href );"
+        },
+        {
+          "type": "bookmark",
+          "name": "Catalog Builder",
+          "url": "javascript:top.open('now/build/catalog/home');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scopes",
+          "url": "javascript:top.open(\"/sys_scope_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Service Portal Config",
+          "url": "javascript:top.open('/sp_config');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Syntax Editor Macros",
+          "url": "javascript:top.open('syntax_editor_macro_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Studio",
+          "url": "javascript:top.open('$studio.do?sysparm_transaction_scope=global&sysparm_nostack=true%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "UI Builder",
+          "url": "javascript:top.open('/now/builder/ui/home');"
+        },
+        {
+          "type": "bookmark",
+          "name": "New Scoped Application",
+          "url": "javascript:top.open('/sys_app.do?sys_id=-1%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "SN Utils Cheat Sheet",
+          "url": "javascript:top.open(\"https://www.arnoudkooi.com/wp-content/uploads/2022/05/SN-Utils-Cheat-Sheet.pdf\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Email & Notifications",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Inbound Email",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Inbound Email Actions",
+              "url": "javascript:top.open('/sysevent_in_email_action_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Inbound Email Flow Triggers",
+              "url": "javascript:top.open('/sys_hub_trigger_instance_list.do');"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Today's Email",
+          "url": "javascript:top.open('/sys_email_list.do?sysparm_query=sys_created_onONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)&sysparm_first_row=1&sysparm_view=inbox%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "All Email",
+          "url": "javascript:top.open('/sys_email_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Notifications",
+          "url": "javascript:top.open('/sysevent_email_action_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Notification Scripts",
+          "url": "javascript:top.open('/sys_script_email_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email Templates",
+          "url": "javascript:top.open('/sysevent_email_template_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email Layouts",
+          "url": "javascript:top.open('/sys_email_layout_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email Diagnostics",
+          "url": "javascript:top.open('/email_diagnostics.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email Accounts",
+          "url": "javascript:top.open(\"/sys_email_account_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email Properties",
+          "url": "javascript:top.open('/email_properties.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Email client configuration",
+          "url": "javascript:top.open('/sys_email_client_configuration_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Response Templates",
+          "url": "javascript:top.open(\"/sn_templated_snip_note_template_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "KB0867711 - Email object variables",
+          "url": "https://support.servicenow.com/hi_login.do?uri=%2Fkb%3Fid%3Dkb_article_view%26sysparm_article%3DKB0867711"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Events",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Event Registry",
+          "url": "javascript:top.open('/sysevent_register_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Events",
+          "url": "javascript:top.open('/sysevent_list.do?sysparmquery=sys_created_onONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Today's Events",
+          "url": "javascript:top.open(\"/sysevent_list.do?sysparm_query=sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Filters",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Todays Records",
+          "url": "javascript:top.open('/'+prompt('Enter Table Name:', 'task')+'_list.do?sysparm_query=sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Filter to the last 7 days",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window;top.open(w.location.pathname + \"?sysparm_query=sys_created_onRELATIVEGT@dayofweek@ago@7\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Form Utils",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Get Audit History",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form,t=f.getTableName(),i=f.getUniqueValue();top.open(\"/sys_history_set.do?sysparm_query=table=\"+t+\"^id=\"+i);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Get Journal Entries",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;top.open(\"/sys_journal_field_list.do?sysparm_query=element_id=\"+f.getUniqueValue());"
+        },
+        {
+          "type": "bookmark",
+          "name": "Get Variables",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,f=w.g_form;top.open(\"/sc_item_option_mtom_list.do?sysparm_query=request_item=\"+f.getUniqueValue());"
+        },
+        {
+          "type": "bookmark",
+          "name": "Make Fields Editable",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.elements.forEach(field=%3Ef.setReadOnly(field.fieldName,false));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Make Fields Optional",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.elements.forEach(field=%3Ef.setMandatory(field.fieldName,false));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Make Fields Read Only",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.elements.forEach(field=%3Ef.setReadOnly(field.fieldName,true));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Make Fields Visible",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.elements.forEach(field=%3Ef.setVisible(field.fieldName,true));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open Portal Form",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form,t=f.getTableName(),i=f.getUniqueValue();top.open(%27/sp?id=form&table=%27+t+%27&sys_id=%27+i);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Save Record",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.save();"
+        },
+        {
+          "type": "bookmark",
+          "name": "Set Field Value",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;f.setValue(prompt(%27Enter the field name:%27),prompt(%27Enter the value:%27));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Show Record XML",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;top.open(f.getTableName()+%27.do?XML=&sys_target=&sys_id=%27+f.getUniqueValue());"
+        },
+        {
+          "type": "bookmark",
+          "name": "Show Scratchpad",
+          "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window;w.g_form.addWarningMessage(%27Scratchpad:%3Cbr/%3E%3Cpre%3E%27+JSON.stringify(w.g_scratchpad,null,2)+%27%3C/pre%3E%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Show Scratchpad (Alert)",
+          "url": "javascript: var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window;w.g_scratchpad=w.g_scratchpad||{%27scratchpad%27:%27empty%27};w.alert(%27Scratchpad:\\n%27+JSON.stringify(w.g_scratchpad,null,2));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Show Field Info",
+          "url": "javascript:var f=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"].g_form:g_form;f.addInfoMessage(\"%3Ctable class=%27table%27%3E%3Ctr%3E%3Cth%3EName%3C/th%3E%3Cth%3EType%3C/th%3E%3Cth%3EReference%3C/th%3E%3C/tr%3E\"+f.elements.map(el=%3E%27%3Ctr%3E%27+Object.keys(el).filter(k=%3E[%27fieldName%27,%27type%27,%27reference%27].includes(k)).map(k=%3E%27%3Ctd%3E%27+el[k]+%27%3C/td%3E%27)+%27%3C/tr%3E%27)+\"%3C/table%3E\")"
+        },
+        {
+          "type": "bookmark",
+          "name": "Goto Top",
+          "url": "javascript:window.scrollTo(0,0);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Goto Bottom",
+          "url": "javascript:window.scrollTo(1000);"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Importing and Exporting",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Importing",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Data Sources",
+              "url": "javascript:top.open(\"/sys_data_source_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Transform Maps",
+              "url": "javascript:top.open(\"/sys_transform_map_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Transform Scripts",
+              "url": "javascript:top.open(\"/sys_transform_script_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Import Sets",
+              "url": "javascript:top.open(\"/sys_import_set_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Import Set Tables",
+              "url": "javascript:top.open(\"/sys_db_object_list.do?sysparm_query=super_class.label=Import Set Row\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Transform History",
+              "url": "javascript:top.open(\"/sys_import_set_run_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Today's Trasforms",
+              "url": "javascript:top.open(\"/sys_import_set_run_list.do?sysparm_query=sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Scheduled Imports",
+              "url": "javascript:top.open(\"/scheduled_import_set_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Export Sets",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Export Sets",
+              "url": "javascript:top.open(\"/sys_export_set_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Export Definitions",
+              "url": "javascript:top.open(\"/sys_export_definition_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Export Targets",
+              "url": "javascript:top.open(\"/sys_export_target_list.do\");"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Integrations",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Web Services",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "REST API Explorer",
+              "url": "javascript:top.open(\"/$restapi.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Outbound REST",
+              "url": "javascript:top.open(\"/sys_rest_message_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Scripted REST APIs",
+              "url": "javascript:top.open(\"/sys_ws_definition_list.do\");"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "ITOM",
+      "children": [
+        {
+          "type": "folder",
+          "name": "CMDB",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "CMDB Workspace",
+              "url": "javascript:top.open(\"/now/cmdb/home\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CI Search",
+              "url": "javascript:top.open(\"/now/cmdb/home/sub/conditional-search\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CI Class Manager",
+              "url": "javascript:top.open('$ciModel.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "CI Class Info",
+              "url": "javascript:top.open('cmdb_class_info_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Classification Definitions",
+              "url": "javascript:top.open(\"/discovery_classy_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Data Manager",
+              "url": "javascript:top.open('/now/nav/ui/classic/params/target/%24ci_lifecycle.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "CI Filter Only",
+              "url": "javascript:top.open('/cmdb_ci_list.do?sysparm_filter_only=true%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB MultiSource Data",
+              "url": "javascript:top.open(\"/cmdb_multisource_data_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Data Source Histories",
+              "url": "javascript:top.open(\"/cmdb_datasource_last_update_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Data Foundations",
+              "url": "javascript:top.open('/$pa_dashboard.do?sysparm_dashboard=bc4b1417537c901032b7ddeeff7b1216&sysparm_tab=918b9417537c901032b7ddeeff7b1238&sysparm_cancelable=true&sysparm_editable=false&sysparm_active_panel=false%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB View Dashboard",
+              "url": "javascript:top.open('$pa_dashboard.do?sysparm_dashboard=0b35c80ceb10220078e44d3df106fe61%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Group VIew",
+              "url": "javascript:top.open('$pa_dashboard.do?sysparm_dashboard=5b080828c7843200a210c1452e976394%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Health Configurations",
+              "url": "javascript:top.open('cmdb_health_config_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Service View",
+              "url": "javascript:top.open('$pa_dashboard.do?sysparm_dashboard=48b1c6beebb3120078e44d3df106fe29%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Relationship Types",
+              "url": "javascript:top.open(\"/cmdb_rel_type_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Relationship Editor",
+              "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form;top.open(%27$relationshipEditor.do?sysparm_collection=%27+f.getValue(%27sys_class_name%27)+%27&sysparm_collectionID=%27+f.getUniqueValue());"
+            },
+            {
+              "type": "bookmark",
+              "name": "Query Builder",
+              "url": "javascript:top.open(\"/$queryBuilder.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Discovery",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Home",
+              "url": "javascript:top.open(\"/$discovery_result_homepage.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Quick Discovery",
+              "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,gdw=new w.GlideDialogWindow(\"quick_discovery\"),gwt=new w.GwtMessage();gdw.setTitle(gwt.getMessage(%27Quick Discovery%27));gdw.setSize(350, 300);gdw.render();"
+            },
+            {
+              "type": "bookmark",
+              "name": "Admin Console",
+              "url": "javascript:top.open(\"/now/discovery-admin-workspace/home\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Automation Error Messages",
+              "url": "javascript:top.open(\"/automation_error_msg_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Behaviors",
+              "url": "javascript:top.open(\"/discovery_behavior_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Credentials",
+              "url": "javascript:top.open(\"/discovery_credentials_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "MID Server Dashboard",
+              "url": "javascript:top.open(\"/now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/a04173bd5b242110cc456e8a1d81c7d7\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Pattern Command List",
+              "url": "javascript:top.open(\"/pd_command_list_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Port Probes",
+              "url": "javascript:top.open(\"/discovery_port_probe_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Process Classification",
+              "url": "javascript:top.open(\"/discovery_classy_proc_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "SA Patterns",
+              "url": "javascript:top.open(\"/sa_pattern_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Schedules",
+              "url": "javascript:top.open(\"/discovery_schedule_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Sensors",
+              "url": "javascript:top.open(\"/discovery_sensor_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Today's Logs",
+              "url": "javascript:top.open(\"/discovery_log_list.do?sysparm_query=sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Discovery error messages",
+              "url": "https://www.servicenow.com/docs/bundle/yokohama-it-operations-management/page/product/discovery/concept/c_DiscoveryErrorMessages.html"
+            },
+            {
+              "type": "bookmark",
+              "name": "Credentials & Permissions troubleshooting on Discovery, Service Mapping, Orchestration - Support and Troubleshooting",
+              "url": "https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0657528"
+            },
+            {
+              "type": "bookmark",
+              "name": "Import Shortcut Sources",
+              "url": "javascript:top.open(\"/sys_object_source_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB IRE Partial Payloads",
+              "url": "javascript:top.open(\"/cmdb_ire_partial_payloads_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Discovery",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Home",
+              "url": "javascript:top.open(\"/$discovery_result_homepage.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Discovery Dashboard",
+              "url": "javascript:top.open(\"/$pa_dashboard.do?sysparm_dashboard=98db0f8a0fc03010ce4d142386767e44\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Configuration Console",
+              "url": "javascript:top.open(\"/$discovery_configuration_console.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "MID Servers",
+              "url": "javascript:top.open(\"/ecc_agent_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Credentials",
+              "url": "javascript:top.open(\"/discovery_credentials_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Discovery Schedules",
+              "url": "javascript:top.open(\"/discovery_schedule_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Discovery Behaviors",
+              "url": "javascript:top.open(\"/discovery_behavior_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Process Classifications",
+              "url": "javascript:top.open(\"/discovery_classy_proc_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Discovery Patterns",
+              "url": "javascript:top.open(\"/sn_discovery_patterns_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CMDB Dashboard - CMDB View",
+              "url": "javascript:top.open(\"/$pa_dashboard.do?sysparm_dashboard=0b35c80ceb10220078e44d3df106fe61\""
+            },
+            {
+              "type": "bookmark",
+              "name": "IP Services",
+              "url": "javascript:top.open(\"/cmdb_ip_service_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Port Probe",
+              "url": "javascript:top.open(\"/discovery_port_probe_list.do\");"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "ITSM",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Change Management",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "CAB Meetings",
+              "url": "javascript:top.open(\"/cab_meeting_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "CAB Agenda Items",
+              "url": "javascript:top.open(\"/cab_agenda_item_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Close Change Request",
+              "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window;var f=w.g_form;f.setValue(\"close_code\",\"successful\");f.setValue(\"close_notes\",\"No issues\");w.moveToClosed();"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "ITSM Categories",
+          "url": "javascript:top.open(\"/sys_choice_list.do?sysparm_query=nameINincident,problem,change_request^elementINcategory,subcategory^inactive=false\");"
+        },
+        {
+          "type": "folder",
+          "name": "Service Level Agreement (SLA)",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "SLA Definitions",
+              "url": "javascript:top.open(\"/contract_sla_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Task SLAs",
+              "url": "javascript:top.open(\"/task_sla_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Incidents",
+          "url": "javascript:top.open(\"/incident_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Change Requests",
+          "url": "javascript:top.open(\"/change_request_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Problems",
+          "url": "javascript:top.open(\"/problem_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Knowledge Management",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Knowledge Portal",
+          "url": "javascript:top.open(\"/now/nav/ui/classic/params/target/kb?id=kb_home\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Knowledge Bases",
+          "url": "javascript:top.open('/kb_knowledge_base_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Knowledge Categories",
+          "url": "javascript:top.open(\"/kb_category_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Articles",
+          "url": "javascript:top.open('/kb_knowledge_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Article Feedback",
+          "url": "javascript:top.open(\"/kb_feedback_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Article Templates",
+          "url": "javascript:top.open(\"/kb_article_template_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Knowledge Block",
+          "url": "javascript:top.open(\"/kb_knowledge_block_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "User Criteria",
+          "url": "javascript:top.open('/user_criteria_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open current article in portal",
+          "url": "javascript:var f=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"].g_form:g_form;top.open(\"/esc?id=kb_article&sysparm_article=\"+f.getValue(\"number\"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Maik Skoddow's KM resources",
+          "url": "https://www.servicenow.com/community/now-platform-articles/platform-knowledge-management-knowledge-amp-troubleshooting/ta-p/2317922"
+        },
+        {
+          "type": "bookmark",
+          "name": "Ashley Snyder's KM Resources",
+          "url": "https://www.servicenow.com/community/knowledge-management-articles/servicenow-knowledge-management-on-demand-training-and-academy/ta-p/2527093"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "List Utils",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Open Portal List",
+          "url": "javascript:var n=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_navigation:g_navigation,t=n.getURL().match(/\\/(\\w+?)_list.do/)[1];top.open(%27/sp?id=list&table=%27+t);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Portal List View",
+          "url": "javascript:var w=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27]:window;top.open(%27sp/?spa=1&id=list&table=%27+w.g_list.getTableName());"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Personal Preferences & Favorites",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Create Bookmark/Favorite",
+          "url": "javascript:top.open(\"/sys_ui_bookmark.do?sys_id=-1&sysparm_query=ui_type=all^url=\"+location.pathname+\"^EQ\")"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Private Task",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,u=w.g_user.getUserID();top.open(\"/vtb_task.do?sys_id=-1&sysparm_query=assigned_to=\"+u);"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Reporting and Dashboards",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Visualisation Designer",
+          "url": "javascript:top.open(\"/now/platform-analytics-workspace/visualization-designer/new\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "New Scheduled Export",
+          "url": "javascript:top.open(\"/now/platform-analytics-workspace/scheduled-export/new-1_uid_1\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Analytics Center",
+          "url": "javascript:top.open(\"/now/platform-analytics-workspace/analytics-center-home\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Dashboard Library",
+          "url": "javascript:top.open(\"/now/platform-analytics-workspace/dashboard-library\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Dashboard List",
+          "url": "javascript:top.open(\"/par_dashboard_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Data Visualization List",
+          "url": "javascript:top.open(\"/par_visualization_list.do\");"
+        },
+        {
+          "type": "folder",
+          "name": "Legacy Reports & Dashboards",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Create a report",
+              "url": "javascript:top.open('/sys_report_template.do?sysparm_create=true%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Report List",
+              "url": "javascript:top.open('/sys_report_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Dashboard List",
+              "url": "javascript:top.open('/pa_dashboards_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Reports",
+              "url": "javascript:top.open('report_home.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Scheduled Email of Reports",
+              "url": "javascript:top.open(\"/sysauto_report_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Visual Task Boards",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Visual Task Boards",
+              "url": "javascript:top.open(\"/vtb_board_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Visual Task Board Card",
+              "url": "javascript:top.open(\"/vtb_card_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Visual Task Board Card History",
+              "url": "javascript:top.open(\"/vtb_card_history_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Visual Task Board Lanes",
+              "url": "javascript:top.open(\"/vtb_lane_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Platform Analytics Enablement Toolkit - ServiceNow Community",
+          "url": "https://www.servicenow.com/community/performance-analytics-blog/platform-analytics-enablement-toolkit/ba-p/2754702"
+        },
+        {
+          "type": "bookmark",
+          "name": "Moving from Classic/Core UI reporting to Platform ... - ServiceNow Community",
+          "url": "https://www.servicenow.com/community/performance-analytics-blog/moving-from-classic-core-ui-reporting-to-platform-analytics/ba-p/3209041"
+        },
+        {
+          "type": "bookmark",
+          "name": "Getting Ready for Platform Analytics: Value, Gaps,... - ServiceNow Community",
+          "url": "https://www.servicenow.com/community/performance-analytics-blog/getting-ready-for-platform-analytics-value-gaps-and-fixes-2026/ba-p/3480021"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Scheduled Items",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Today's Transaction Log",
+          "url": "javascript:top.open('/syslog_transaction_list.do?sysparm_query=sys_created_onONToday%40javascript%3Ags.daysAgoStart(0)%40javascript%3Ags.daysAgoEnd(0)%5EurlSTARTSWITHJOB%3A&sysparm_view=bg_transactions%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Completed in last 30 minutes",
+          "url": "javascript:top.open('/sys_scheduler_job_history_list.do?sysparm_query=time_range_end%3Ejavascript%3Ags.beginningOfLast30Minutes()%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Job Definitions",
+          "url": "javascript:top.open('/sysauto_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Job Instances",
+          "url": "javascript:top.open('/sys_trigger_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Exports",
+          "url": "javascript:top.open('/scheduled_data_export_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Imports",
+          "url": "javascript:top.open('/scheduled_import_set_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Reports",
+          "url": "javascript:top.open('/now/nav/ui/classic/params/target/sysauto_report_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Scheduled Workflows",
+          "url": "javascript:top.open('/wf_workflow_schedule_list.do');"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Scripts",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Open SI in Background Script",
+          "url": "javascript:var f=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"].g_form:g_form,si=f.getValue(\"api_name\"),w=top.open(\"/sys.scripts.modern.do?content=var utils = new \" + si + \"();\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Background Scripts",
+          "url": "javascript:top.open(\"sys.scripts.modern.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Background Scripts (Legacy)",
+          "url": "javascript:top.open(\"/sys.scripts.do?noredirect=true\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Execution History",
+          "url": "javascript:top.open(\"/sys_script_execution_history_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Business Rules",
+          "url": "javascript:top.open('sys_script_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Client Scripts",
+          "url": "javascript:top.open('sys_script_client_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Fix Scripts",
+          "url": "javascript:top.open('sys_script_fix_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Script Actions",
+          "url": "javascript:top.open(\"/sysevent_script_action_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Script Includes",
+          "url": "javascript:top.open('sys_script_include_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "UI Scripts",
+          "url": "javascript:top.open('sys_ui_script_list.do');"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Search",
+      "children": [
+        {
+          "type": "folder",
+          "name": "AI Search",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "01 AI Search Indexed Sources",
+              "url": "javascript:top.open(\"/ais_datasource_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "02 AI Search Search Sources",
+              "url": "javascript:top.open(\"/ais_search_source_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "03 AI Search Search Profiles",
+              "url": "javascript:top.open(\"/ais_search_profile_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "bookmark",
+          "name": "Keyword Search",
+          "url": "javascript:top.open(\"/task_list.do?sysparm_query=GOTO123TEXTQUERY321=\"+prompt(\"Search for:\"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "Global Search",
+          "url": "javascript:top.open(\"/textsearch.do?sysparm_search=\"+prompt(\"Search for:\"));"
+        },
+        {
+          "type": "bookmark",
+          "name": "AI Search - ServiceNow AI Platform - ServiceNow",
+          "url": "https://www.servicenow.com/products/ai-search.html?state=seamless"
+        },
+        {
+          "type": "bookmark",
+          "name": "AI Search Quick Start Guide",
+          "url": "https://www.servicenow.com/community/intelligence-ml-articles/ai-search-quick-start-guide/ta-p/2307562"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Service Catalog",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Try It",
+          "url": "javascript:var f=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"].g_form:g_form,c=f.getUniqueValue();top.open(\"/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id=\"+c);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Try It Popup",
+          "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,f=w.g_form,c=f.getUniqueValue();w.popupOpenStandard(\"com.glideapp.servicecatalog_cat_item_view.do?sysparm_preview=true&sysparm_id=\"+c);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Try In ESC",
+          "url": "javascript:var f=window.gsft_main?gsft_main.g_form:g_form;top.open(\"/esc?id=sc_cat_item&sys_id=\"+f.getUniqueValue());"
+        },
+        {
+          "type": "bookmark",
+          "name": "Try In CSM",
+          "url": "javascript:var f=window.gsft_main?gsft_main.g_form:g_form;top.open(\"/csm?id=sc_cat_item&sys_id=\"+f.getUniqueValue());"
+        },
+        {
+          "type": "bookmark",
+          "name": "Try In SP",
+          "url": "javascript:var f=window.gsft_main?gsft_main.g_form:g_form;top.open(\"/sp?id=sc_cat_item&sys_id=\"+f.getUniqueValue());"
+        },
+        {
+          "type": "folder",
+          "name": "Automation",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Client Scripts",
+              "url": "javascript:top.open('/catalog_script_client_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "UI Policies",
+              "url": "javascript:top.open('/catalog_ui_policy_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "UI Policy Actions",
+              "url": "javascript:top.open('/catalog_ui_policy_action_list.do');"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Catalogs",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Service Catalog",
+              "url": "javascript:top.open('/catalog_home.do?sysparm_view=catalog_default%27);"
+            },
+            {
+              "type": "bookmark",
+              "name": "List of Catalogs",
+              "url": "javascript:top.open('/sc_catalog_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "List of Categories",
+              "url": "javascript:top.open(\"/sc_category_list.do\");"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Items",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "Maintain items",
+              "url": "javascript:top.open('/sc_cat_item_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Record Producer Records",
+              "url": "javascript:top.open(\"/sc_item_produced_record_list.do\");"
+            },
+            {
+              "type": "bookmark",
+              "name": "Request List",
+              "url": "javascript:top.open('/sc_request_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Request Item List",
+              "url": "javascript:top.open('/sc_req_item_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Request Task List",
+              "url": "javascript:top.open('/sc_task_list.do');"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Variables",
+          "children": [
+            {
+              "type": "bookmark",
+              "name": "List RITM Variables",
+              "url": "javascript:var f = window.gsft_main?gsft_main.g_form:g_form,n=f.getValue(%27number%27);top.open(\"/sc_item_option_mtom_list.do?sysparm_query=sc_item_option.value!%3DNULL%5Erequest_item.number%3D\"+n);"
+            },
+            {
+              "type": "bookmark",
+              "name": "Variable List",
+              "url": "javascript:top.open('/item_option_new_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Variable Sets",
+              "url": "javascript:top.open('/item_option_new_set_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "Question Choices",
+              "url": "javascript:top.open('/question_choice_list.do');"
+            },
+            {
+              "type": "bookmark",
+              "name": "New Variable Set",
+              "url": "javascript:top.open('/item_option_new_set.do');"
+            },
+            {
+              "type": "folder",
+              "name": "Articles",
+              "children": [
+                {
+                  "type": "bookmark",
+                  "name": "ServiceNow Variable Tables Quick Reference",
+                  "url": "https://davidmac.pro/posts/2024-01-11-sn-variables-reference/"
+                },
+                {
+                  "type": "bookmark",
+                  "name": "Variable Attributes",
+                  "url": "javascript:top.open('https://docs.servicenow.com/bundle/vancouver-servicenow-platform/page/product/service-catalog-management/reference/variable-attributes.html');"
+                },
+                {
+                  "type": "bookmark",
+                  "name": "Variable support in various channels",
+                  "url": "javascript:top.open('https://docs.servicenow.com/bundle/tokyo-servicenow-platform/page/product/service-catalog-management/reference/variables-availability.html');"
+                },
+                {
+                  "type": "bookmark",
+                  "name": "Variable Types",
+                  "url": "javascript:top.open('https://docs.servicenow.com/bundle/tokyo-servicenow-platform/page/product/service-catalog-management/reference/r_VariableTypes.html');"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Service Level Agreements & Metrics",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "SLA Definitions",
+          "url": "javascript:top.open(\"/contract_sla_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Task SLAs",
+          "url": "javascript:top.open(\"/task_sla_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Service Portals",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Service Portal Resource Hub",
+          "url": "https://www.servicenow.com/community/service-portal-articles/service-portal-resource-and-training-guide/ta-p/2502648"
+        },
+        {
+          "type": "bookmark",
+          "name": "SPEntryPage Script Include",
+          "url": "javascript:top.open(\"/sys_script_include.do?sys_id=3647c37253221200b0b0547cedc587fd\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Service Portal List",
+          "url": "javascript:top.open('/sp_portal_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open /csm Portal",
+          "url": "javascript:top.open('/csm');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open /esc Portal",
+          "url": "javascript:top.open('/esc');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open /sp Portal",
+          "url": "javascript:top.open('/sp');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open any Portal",
+          "url": "javascript:top.open(prompt('What portal URL do you want to open?%27)||%27sp%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Page Route Map List",
+          "url": "javascript:top.open('/sp_page_route_map_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Pages",
+          "url": "javascript:top.open(\"/sp_page_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Widget List",
+          "url": "javascript:top.open(\"/sp_widget_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "/tcp",
+          "url": "javascript:top.open(\"/tcp\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Portal Favorite",
+          "url": "javascript:top.open(\"/sp_favorite.do?sys_id=-1&sysparm_query=user=\"+g_user.getUserID()+\"^reference_table=\"+g_form.getTableName()+\"^reference_document=\"+g_form.getUniqueValue()+\"^EQ\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Surveys & Assessments",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Assessment Metric Types (Survey Definition)",
+          "url": "javascript:top.open(\"/asmt_metric_type_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Assessment Metric Categories",
+          "url": "javascript:top.open(\"/asmt_metric_category_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Assessment Metrics (Questions)",
+          "url": "javascript:top.open(\"/asmt_metric_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Assessment Instances",
+          "url": "javascript:top.open(\"/asmt_assessment_instance_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Assessment Metric Results (Answers)",
+          "url": "javascript:top.open(\"/asmt_metric_result_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Assessment Results - DB VIew",
+          "url": "javascript:top.open(\"/task_assessment_detail_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Subscriptions and Licensing",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Subscription Roles Discovered",
+          "url": "javascript:top.open(\"/license_role_discovered_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Time Worked",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Time Card Portal",
+          "url": "javascript:top.open(\"/tcp\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Time Sheet Policies",
+          "url": "javascript:top.open(\"/time_sheet_policy_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "My Time Worked",
+          "url": "javascript:top.open('/task_time_worked_list.do?sysparm_query=userDYNAMIC90d1921e5f510100a9ad2572f2b477fe&sysparm_view=default%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Time Cards",
+          "url": "javascript:top.open(\"/time_card_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "Time Sheets",
+          "url": "javascript:top.open(\"/time_sheet_list.do\");"
+        },
+        {
+          "type": "bookmark",
+          "name": "All Time Worked",
+          "url": "javascript:top.open('/task_time_worked_list.do');"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Table Utils",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "List Tables",
+          "url": "javascript: top.open('sys_db_object_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "UX Tables",
+          "url": "javascript:top.open('/sys_db_object_list.do%3Fsysparm_query%3DlabelSTARTSWITHUX%255EORnameSTARTSWITHsys_ux')"
+        },
+        {
+          "type": "bookmark",
+          "name": "Get Definition",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form,t=f.getTableName();top.open(%27/sys_db_object.do?sysparm_query=name=%27+t);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Get Config",
+          "url": "javascript:var f=window.frames['gsft_main']!==undefined?window.frames[%27gsft_main%27].g_form:g_form,t=f.getTableName();top.open(%27/personalize_all.do?sysparm_clear_stack=true&sysparm_rules_table=%27+t+%27&sysparm_rules_label=%27+t);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Add Field",
+          "url": "javascript:var t='sys_dictionary',q='name='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create ACL",
+          "url": "javascript:var t='sys_security_acl',q='name='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Business Rule",
+          "url": "javascript:var t='sys_script',q='collection='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Client Script",
+          "url": "javascript:var t='sys_script_client',q='table='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Data Policy",
+          "url": "javascript:var t='sys_data_policy2',q='model_table='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create Notification",
+          "url": "javascript:var t='sysevent_email_action',q='collection='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list',''); top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create UI Action",
+          "url": "javascript:var t='sys_ui_action',q='table='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create UI Policy",
+          "url": "javascript:var t='sys_ui_policy',q='table='+window.location.pathname.match(/(\\w+).do/)[1].replace('_list','');top.open(t+'.do?sys_id=-1&sysparm_query=%27+q);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Open Table",
+          "url": "javascript:top.open('/'+prompt('What table do you want to open?%27)+%27_list.do?sysparm_filter_only=true%27);"
+        },
+        {
+          "type": "bookmark",
+          "name": "Many to Many definitions",
+          "url": "javascript:top.open(\"/sys_m2m_list.do\");"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Templates",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Template List",
+          "url": "javascript:top.open('/sys_template_list.do');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create a module for a template",
+          "url": "https://docs.servicenow.com/bundle/vancouver-platform-administration/page/administer/form-administration/task/t_CreateAModuleForATemplate.html"
+        },
+        {
+          "type": "bookmark",
+          "name": "Create templates for related task records",
+          "url": "https://docs.servicenow.com/bundle/vancouver-platform-administration/page/administer/form-administration/task/create-templates-for-related-task-records.html"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Workspaces",
+      "children": [
+        {
+          "type": "bookmark",
+          "name": "Admin Workspace",
+          "url": "javascript:top.open('/now/nav/ui/home');"
+        },
+        {
+          "type": "bookmark",
+          "name": "CMDB Workspace",
+          "url": "javascript:top.open('/now/cmdb/home');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Service Operations Workspace",
+          "url": "javascript:top.open('/now/sow/home');"
+        },
+        {
+          "type": "bookmark",
+          "name": "Risk Workspace",
+          "url": "javascript:top.open('/now/risk/risk/risk-home');"
+        }
+      ]
+    },
+    {
+      "type": "bookmark",
+      "name": "Home",
+      "url": "javascript:top.location.pathname=''"
+    }
+  ]
+}
