@@ -50,13 +50,7 @@
           "type": "bookmark",
           "name": "Add Dot-walk Field",
           "url": "javascript:var w=window.frames[\"gsft_main\"]!==undefined?window.frames[\"gsft_main\"]:window,d=w.document,e=d.getElementById(\"slush_right\"),o=d.createElement(\"option\");o.value=prompt(\"Field: \");o.innerHTML=o.value;e.appendChild(o);"
-        },
-        {
-          "type": "bookmark",
-          "name": "Render HTML",
-          "url": "data:text/html,<title>Render HTML</title><body style="font:1rem/1.5 monospace;margin:0 auto;padding:2rem"><h1>Render HTML Snippet</h1><textarea cols="80" rows="35" id="text01" placeholder="Enter snippet here."></textarea><br><button onclick="postIt()">Render Snippet</button><script>function postIt(){var e=document.getElementById("text01").value;window.open().document.body.innerHTML=e}</script></body>"
         }
-        
       ]
     },
     {
